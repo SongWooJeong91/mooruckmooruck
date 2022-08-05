@@ -1,0 +1,37 @@
+.loginState__wrap {
+	height: 100%;
+	// border: 1px solid blue;
+	display: flex;
+	align-items: center;
+	.text {
+		font-size: 14px;
+		padding: 0 10px;
+	}
+	.noti__box {
+		width: 32px;
+		height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid red;
+		img {
+			width: 30px;
+			// height: 20px;
+		}
+	}
+	.userIcon__box {
+		margin: 0 0 0 10px;
+		width: 32px;
+		height: 32px;
+		background: #ccc;
+		border-radius: 50%;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		cursor: pointer;
+		img {
+			width: 30px;
+			// height: 20px;
+		}
+	}
+}
