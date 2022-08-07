@@ -1,24 +1,8 @@
 .loginState__wrap {
 	height: 100%;
-	// border: 1px solid blue;
 	display: flex;
 	align-items: center;
-	.text {
-		font-size: 14px;
-		padding: 0 10px;
-	}
-	.noti__box {
-		width: 32px;
-		height: 32px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border: 1px solid red;
-		img {
-			width: 30px;
-			// height: 20px;
-		}
-	}
+	// border: 1px solid red;
 	.userIcon__box {
 		margin: 0 0 0 10px;
 		width: 32px;
@@ -31,7 +15,129 @@
 		cursor: pointer;
 		img {
 			width: 30px;
-			// height: 20px;
+		}
+	}
+
+	.mypage__box {
+		visibility: hidden;
+		position: absolute;
+		top: 85px;
+		right: 10px;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		border-radius: 8px;
+		border: 1px solid #ddd;
+		background: #f2f2f2;
+		padding: 20px;
+		box-sizing: border-box;
+		.myInfo__box {
+			display: flex;
+			align-items: center;
+			margin: 0 0 10px 0;
+			.myinfo__img {
+				width: 56px;
+				height: 56px;
+				border-radius: 50%;
+				margin: 0 16px 0 0;
+				cursor: pointer;
+			}
+			.myInfo__box-right {
+				flex: 1;
+				.myInfo__box-rt {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					.myInfo__username {
+						span {
+							cursor: pointer;
+							font-weight: 600;
+						}
+					}
+					.myInfo__logout-btn {
+						width: 20px;
+						height: 20px;
+						padding: 6px;
+						cursor: pointer;
+					}
+				}
+				.myInfo__box-rb {
+					width: 100%;
+					display: flex;
+					div {
+						width: 50%;
+						p {
+							text-align: center;
+							line-height: 0.5;
+						}
+					}
+				}
+			}
+		}
+		.plant__add-btn {
+			width: 100%;
+			padding: 6px 0;
+			background: #d2d2d2;
+			margin: 0 0 10px 0;
+			font-size: 20px;
+			fill: #555;
+			cursor: pointer;
+			&:hover {
+				background: #555;
+				fill: #fff;
+				transition: all 0.4s ease-in;
+			}
+		}
+		.noti__box {
+			width: 100%;
+			height: 240px;
+			max-height: 300px;
+			background: #fefefe;
+			overflow: auto;
+			.noti {
+				width: 100%;
+				// height: 60px;
+				display: flex;
+				align-items: center;
+				padding: 10px 14px;
+				box-sizing: border-box;
+				cursor: pointer;
+				img {
+					width: 26px;
+					height: 26px;
+				}
+				.noti__text {
+					flex: 1;
+					box-sizing: border-box;
+					p {
+						font-size: 14px;
+						padding: 0;
+						margin: 0;
+					}
+					span {
+						font-size: 12px;
+						color: #808080;
+					}
+				}
+				&:nth-child(even) {
+					border-top: 1px solid #ddd;
+					border-bottom: 1px solid #ddd;
+				}
+				&:hover {
+					background: #f9f9f9;
+					img {
+						width: 30px;
+						height: 30px;
+						transition: all 0.3s ease-in;
+					}
+				}
+			}
+		}
+	}
+	&:hover {
+		.mypage__box {
+			visibility: visible;
 		}
 	}
 }

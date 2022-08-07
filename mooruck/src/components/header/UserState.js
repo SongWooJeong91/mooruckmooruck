@@ -5,8 +5,8 @@ import LoginState from './LoginState';
 const UserState = () => {
 	return (
 		<div>
-			{/* <LoginState /> */}
-			<LogoutState />
+			<LoginState />
+			{/* <LogoutState /> */}
 		</div>
 	);
 };

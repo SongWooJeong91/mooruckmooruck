@@ -2,11 +2,17 @@
 	width: 600px;
 	// height: 280px;
 	padding: 20px 0;
+	margin: 0 0 100px 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	// background: #fef9ee;
 	border: 1px solid #ddd;
+	img {
+		width: 400px;
+		height: 400px;
+		padding: 30px;
+	}
 	p {
 		text-align: center;
 	}

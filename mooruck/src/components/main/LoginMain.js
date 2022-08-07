@@ -1,29 +1,12 @@
 import React from 'react';
-import { BiSearch } from 'react-icons/bi';
+import PlantList from '../../pages/PlantList';
+import SearchWindow from '../contents/SearchWindow';
 
 const LoginMain = () => {
 	return (
 		<div className="loginMain__wrap">
-			<div className="main__search">
-				<input type="text" />
-				<BiSearch className="main__search-icon" />
-			</div>
-			<div className="main__contents">
-				<div className="main__content"></div>
-				<div className="main__content"></div>
-				<div className="main__content"></div>
-				<div className="main__content"></div>
-				<div className="main__content"></div>
-				<div className="main__content"></div>
-				<div className="main__content"></div>
-				<div className="main__content"></div>
-				<div className="main__content"></div>
-				<div className="main__content"></div>
-				<div className="main__content"></div>
-				<div className="main__content"></div>
-				<div className="main__content"></div>
-				<div className="main__content"></div>
-			</div>
+			<SearchWindow />
+			<PlantList />
 		</div>
 	);
 };
