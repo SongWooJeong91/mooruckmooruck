@@ -1,46 +1,52 @@
 .plantItem__wrap {
-	width: 360px;
-	height: 360px;
+	width: 25%;
+	max-width: 360px;
+	min-width: 280px;
+	height: 25vw;
+	max-height: 360px;
+	min-height: 280px;
 	box-sizing: border-box;
 	position: relative;
 	img {
 		width: 100%;
 		height: 100%;
 	}
-
 	.plantItem__hover-box {
+		// border: 1px solid red;
 		opacity: 0;
-		width: 100%;
-		height: 100%;
+		width: 90%;
+		height: 90%;
 		position: absolute;
-		bottom: 0;
-		left: 0;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		// border: 1px solid blue;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 		box-sizing: border-box;
-		background-color: rgba(0, 0, 0, 0.5);
+		// background-color: rgba(0, 0, 0, 0.4);
+		background-color: rgba(128, 128, 128, 0.6);
 		.plantItem__text-box {
 			width: 100%;
-			height: 300px;
+			// height: 240px;
 			// border: 1px solid blue;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			padding: 20px;
+			padding: 10px;
 			box-sizing: border-box;
 
 			p {
 				color: #fff;
-				font-size: 22px;
+				font-size: 26px;
 			}
 			.plantItem__text {
 				width: 100%;
 				display: flex;
 				align-items: center;
 				padding: 10px;
-				// border: 1px solid red;
 				box-sizing: border-box;
 				.plantItem__text-title {
 					width: 55%;
@@ -51,6 +57,7 @@
 					color: #fff;
 					padding: 0 6px 0 0;
 					box-sizing: border-box;
+					font-size: 18px;
 					// border: 1px solid blue;
 					img {
 						width: 28px;
@@ -60,11 +67,11 @@
 					}
 				}
 				.title__ls {
-					letter-spacing: 0.4rem;
+					letter-spacing: 0.5rem;
 					padding: 0;
 				}
 				span {
-					width: 45%;
+					// width: 45%;
 					color: #fff;
 					padding: 0 10px;
 					// border: 1px solid red;
@@ -77,7 +84,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
-			padding: 20px;
+			padding: 10px 0;
 			box-sizing: border-box;
 			.plant__btn {
 				width: 46px;
@@ -91,9 +98,12 @@
 				cursor: pointer;
 				.plant__btn-bibookheart,
 				.plant__btn-bishare {
-					width: 60%;
-					height: 60%;
+					width: 26px;
+					height: 26px;
 					fill: #555;
+				}
+				.plant__btn-bibookheart {
+					padding: 4px 0 0;
 				}
 				&:hover {
 					background-color: rgba(0, 0, 0, 0.3);
@@ -102,8 +112,8 @@
 						fill: #fff;
 					}
 				}
-				&:first-child {
-					margin: 0 20px 0 0;
+				&:nth-child(2) {
+					margin: 0 20px;
 				}
 			}
 		}

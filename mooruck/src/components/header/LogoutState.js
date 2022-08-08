@@ -7,7 +7,7 @@ const LogoutState = () => {
 			<Link to="/login">
 				<button>로그인</button>
 			</Link>
-			<Link to="/regist">
+			<Link to="/registUser">
 				<button>회원가입</button>
 			</Link>
 		</div>

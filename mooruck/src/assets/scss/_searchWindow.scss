@@ -1,5 +1,7 @@
 .searchWindow__wrap {
-	width: 500px;
+	// width: 500px;
+	min-width: 280px;
+	width: 30%;
 	height: 50px;
 	border: 1px solid #ddd;
 	border-radius: 8px;
@@ -17,7 +19,8 @@
 		width: 30px;
 		height: 30px;
 		padding: 0 20px 0 0;
-		color: #555;
+		fill: #808080;
+		// color: #555;
 		cursor: pointer;
 	}
 }

@@ -21,7 +21,7 @@
 	.mypage__box {
 		visibility: hidden;
 		position: absolute;
-		top: 85px;
+		top: 82px;
 		right: 10px;
 		width: 300px;
 		display: flex;
@@ -31,10 +31,11 @@
 		background: #f2f2f2;
 		padding: 20px;
 		box-sizing: border-box;
+		transition: all 0.1s ease;
 		.myInfo__box {
 			display: flex;
 			align-items: center;
-			margin: 0 0 10px 0;
+			margin: 0 0 20px 0;
 			.myinfo__img {
 				width: 56px;
 				height: 56px;
@@ -50,6 +51,7 @@
 					align-items: center;
 					justify-content: space-between;
 					.myInfo__username {
+						text-decoration: none;
 						span {
 							cursor: pointer;
 							font-weight: 600;
@@ -64,29 +66,56 @@
 				}
 				.myInfo__box-rb {
 					width: 100%;
+					padding: 10px 0;
 					display: flex;
-					div {
-						width: 50%;
-						p {
+					justify-content: space-between;
+					// border: 1px solid red;
+					.myInfo__plantState {
+						width: 33%;
+						display: flex;
+						align-items: center;
+						// justify-content: center;
+						text-decoration: none;
+						img {
+							width: 22px;
+							height: 22px;
+							padding: 0 6px 0 0;
+						}
+						span {
 							text-align: center;
 							line-height: 0.5;
+							font-size: 14px;
+							font-weight: 600;
 						}
 					}
 				}
 			}
 		}
-		.plant__add-btn {
+		.loginState__plantList-btn,
+		.loginState__plantDiaryList-btn {
 			width: 100%;
 			padding: 6px 0;
 			background: #d2d2d2;
 			margin: 0 0 10px 0;
-			font-size: 20px;
+			font-size: 14px;
 			fill: #555;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
 			cursor: pointer;
+			.loginState__plantList-icon,
+			.loginState__plantList-icon {
+				font-size: 20px;
+				padding: 0 6px 0 0;
+			}
 			&:hover {
 				background: #555;
-				fill: #fff;
-				transition: all 0.4s ease-in;
+				color: #fff;
+				.loginState__plantList-icon,
+				.loginState__plantList-icon {
+					fill: #fff;
+				}
 			}
 		}
 		.noti__box {

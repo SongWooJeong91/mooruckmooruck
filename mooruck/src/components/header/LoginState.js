@@ -1,5 +1,6 @@
 import React from 'react';
 import { BiLogOut, BiPlus } from 'react-icons/bi';
+import { RiBook2Line, RiPlantLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
 const LoginState = () => {
@@ -25,19 +26,41 @@ const LoginState = () => {
 							</Link>
 							<BiLogOut className="myInfo__logout-btn" title="로그아웃" />
 						</div>
-						<div className="myInfo__box-rb">
-							<div>
-								<p>오늘의 물주기</p>
-								<p>0</p>
-							</div>
-							<div>
-								<p>반려식물</p>
-								<p>0</p>
-							</div>
-						</div>
+						{/* <div className="myInfo__box-rb">
+							<Link to="/" className="myInfo__plantState">
+								<img
+									src={process.env.PUBLIC_URL + '/assets/img/icons/water.png'}
+									alt="notificationti"
+								/>
+								<span>1</span>
+							</Link>
+							<Link to="/" className="myInfo__plantState">
+								<img
+									src={
+										process.env.PUBLIC_URL +
+										'/assets/img/icons/nutritionalSupplements.png'
+									}
+									alt="notificationti"
+								/>
+								<span>2</span>
+							</Link>
+							<Link to="/" className="myInfo__plantState">
+								<img
+									src={process.env.PUBLIC_URL + '/assets/img/icons/shovels.png'}
+									alt="notificationti"
+								/>
+								<span>1</span>
+							</Link>
+						</div> */}
 					</div>
 				</div>
-				<BiPlus className="plant__add-btn" title="식물 등록" />
+				<Link to="/" className="loginState__plantList-btn">
+					<RiBook2Line className="loginState__plantList-icon" /> 내 반려식물
+				</Link>
+				<Link to="/plantDiaryList" className="loginState__plantDiaryList-btn">
+					<RiPlantLine className="loginState__plantList-icon" />
+					식물 일기
+				</Link>
 				<div className="noti__box">
 					<div className="noti">
 						<div className="noti__text">

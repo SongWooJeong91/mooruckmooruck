@@ -1,5 +1,6 @@
 import React from 'react';
-import { BiShare, BiBookHeart } from 'react-icons/bi';
+import { RiBook2Line, RiPlantLine } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 const PlantItem = () => {
 	return (
@@ -42,13 +43,18 @@ const PlantItem = () => {
 				</div>
 				<div className="plant__btn-box">
 					<div className="plant__btn">
-						<BiBookHeart
-							className="plant__btn-bibookheart"
-							title="식물일기 바로가기"
-						/>
+						<Link to="/plantDiaryList">
+							<RiBook2Line
+								className="plant__btn-bibookheart"
+								title="식물일기 바로가기"
+							/>
+						</Link>
 					</div>
 					<div className="plant__btn">
-						<BiShare className="plant__btn-bishare" title="식물정보 바로가기" />
+						<RiPlantLine
+							className="plant__btn-bishare"
+							title="식물정보 바로가기"
+						/>
 					</div>
 				</div>
 			</div>

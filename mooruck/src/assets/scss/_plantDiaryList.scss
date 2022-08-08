@@ -1,0 +1,35 @@
+.plantDiaryList__wrap {
+	width: 100%;
+	box-sizing: border-box;
+	min-height: calc(100vh - 80px);
+	padding: 100px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	button {
+		border: none;
+		outline: none;
+		background-color: #ddd;
+		position: fixed;
+		bottom: 60px;
+		right: 60px;
+		width: 56px;
+		height: 56px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		.plantDiaryAdd__btn-icon {
+			font-size: 26px;
+			fill: #525252;
+		}
+		&:hover {
+			background-color: #525252;
+			.plantDiaryAdd__btn-icon {
+				fill: #fff;
+			}
+		}
+	}
+}

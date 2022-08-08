@@ -1,18 +1,37 @@
+// font
 @import 'font';
+
 // components
+@import 'pageTitle';
+@import 'searchWindow';
+
+// header
 @import 'logo';
-@import 'loginForm';
 @import 'loginState';
 @import 'logoutState';
+
+@import 'userState';
+
+// login
+@import 'loginForm';
+
+// main
 @import 'loginMain';
 @import 'logoutMain';
-@import 'registUserForm';
-@import 'userState';
-@import 'registForm';
 @import 'navMenu';
-@import 'pageTitle';
+
+// plant
 @import 'plantItem';
-@import 'searchWindow';
+@import 'registForm';
+
+// plantDiary
+@import 'diaryList';
+@import 'diaryItem';
+@import 'diaryEmpty';
+
+// registUser
+@import 'registUserForm';
+
 // pages
 @import 'footer';
 @import 'header';
@@ -21,6 +40,8 @@
 @import 'plantList';
 @import 'registPlant';
 @import 'registUser';
+@import 'copyrightInfo';
+@import 'plantDiaryList';
 
 * {
 	color: #404040;
@@ -34,4 +55,5 @@ h4,
 h5,
 h6 {
 	font-family: 'yg-jalnan';
+	color: #1b53a6;
 }
