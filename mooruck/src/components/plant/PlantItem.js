@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { RiBook2Line, RiPlantLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
-const PlantItem = () => {
+const PlantItem = ({ plant }) => {
+	console.log('plant 개인 정보', plant);
+	const [sunshine, setSunshine] = useState([]);
+	
+
 	return (
 		<div className="plantItem__wrap">
 			<div className="plantItem__hover-box">
 				<div className="plantItem__text-box">
-					<p>곰둥이</p>
+					<p>{plant.plantName}</p>
 					<div className="plantItem__text">
 						<div className="plantItem__text-title title__ls">
 							<img
@@ -16,7 +20,7 @@ const PlantItem = () => {
 							/>
 							물주기
 						</div>
-						<span>30일</span>
+						<span>{plant.wateringCycle}</span>
 					</div>
 					<div className="plantItem__text">
 						<div className="plantItem__text-title title__ls">
@@ -26,7 +30,8 @@ const PlantItem = () => {
 							/>
 							일조량
 						</div>
-						<span>반음지</span>
+						<span>{plant.sunshine}</span>
+						{/* {console.log('sunshine 타입', typeof plant.sunshine)} */}
 					</div>
 					<div className="plantItem__text">
 						<div className="plantItem__text-title">
@@ -38,12 +43,15 @@ const PlantItem = () => {
 							/>
 							생육온도
 						</div>
-						<span>21 ~ 27</span>
+						<span>{plant.temperature}</span>
 					</div>
 				</div>
 				<div className="plant__btn-box">
 					<div className="plant__btn">
-						<Link to="/plantDiaryList">
+						{/* 식물 일기 바로 가려면 식물 번호로 정보 조회해서 식물 일기 목록으로 가야됨
+						만약에 식물일기가 있다면 바로 가기
+						만약에 식물일기가 없다면 없다고 알려주기 */}
+						<Link to="/diaryList">
 							<RiBook2Line
 								className="plant__btn-bibookheart"
 								title="식물일기 바로가기"
@@ -51,17 +59,17 @@ const PlantItem = () => {
 						</Link>
 					</div>
 					<div className="plant__btn">
-						<RiPlantLine
-							className="plant__btn-bishare"
-							title="식물정보 바로가기"
-						/>
+						{/* 식물정보 바로 가려면 식물 번호로 식물 정보 조회 */}
+						<Link to="/plantDetail">
+							<RiPlantLine
+								className="plant__btn-bishare"
+								title="식물정보 바로가기"
+							/>
+						</Link>
 					</div>
 				</div>
 			</div>
-			<img
-				src={process.env.PUBLIC_URL + '/assets/img/plant-img01.png'}
-				alt=""
-			/>
+			<img src={`http://localhost:3005${plant.plantImg}`} alt="" />
 		</div>
 	);
 };

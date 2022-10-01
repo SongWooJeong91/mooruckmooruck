@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PageTitle from '../components/contents/PageTitle';
+import PageTitle from '../components/PageTitle';
 
 const CopyrightInfo = () => {
 	return (

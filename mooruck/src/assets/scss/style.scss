@@ -1,12 +1,9 @@
-// font
-@import 'font';
-
 // components
 @import 'pageTitle';
 @import 'searchWindow';
+@import 'navMenu';
 
 // header
-@import 'logo';
 @import 'loginState';
 @import 'logoutState';
 
@@ -18,19 +15,20 @@
 // main
 @import 'loginMain';
 @import 'logoutMain';
-@import 'navMenu';
+
+// mypage
+@import 'myPageForm';
+@import 'passwordCheck';
 
 // plant
 @import 'plantItem';
-@import 'registForm';
+@import 'plantDiaryItem';
 
 // plantDiary
 @import 'diaryList';
 @import 'diaryItem';
 @import 'diaryEmpty';
-
-// registUser
-@import 'registUserForm';
+@import 'diaryRegistForm';
 
 // pages
 @import 'footer';
@@ -38,13 +36,18 @@
 @import 'login';
 @import 'main';
 @import 'plantList';
-@import 'registPlant';
-@import 'registUser';
+@import 'registPlantDiary';
+@import 'plantRegist';
+@import 'memberRegist';
 @import 'copyrightInfo';
 @import 'plantDiaryList';
+@import 'myPlant';
+@import 'plantView';
+@import 'myPage';
+@import 'myPageUpdate';
 
 * {
-	color: #404040;
+	color: #595959;
 	font-family: 'Happiness-Sans-Regular';
 }
 

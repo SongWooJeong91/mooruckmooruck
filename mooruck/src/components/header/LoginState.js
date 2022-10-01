@@ -1,9 +1,21 @@
-import React from 'react';
-import { BiLogOut, BiPlus } from 'react-icons/bi';
+import axios from 'axios';
+import React, { useState } from 'react';
+import { useEffect } from 'react';
+import { BiLogOut } from 'react-icons/bi';
 import { RiBook2Line, RiPlantLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
 const LoginState = () => {
+	const [member, setMember] = useState({
+		id: '',
+		email: '',
+		password: '',
+		username: '',
+		phone: '',
+		photo: '',
+	});
+	const idx = 1;
+
 	return (
 		<div className="loginState__wrap">
 			<div className="userIcon__box">
@@ -14,51 +26,27 @@ const LoginState = () => {
 			</div>
 			<div className="mypage__box">
 				<div className="myInfo__box">
-					<img
-						className="myinfo__img"
-						src={process.env.PUBLIC_URL + '/assets/img/icons/user.png'}
-						alt="notificationti"
-					/>
+					<Link to="/myPage">
+						<img
+							className="myinfo__img"
+							src={process.env.PUBLIC_URL + '/assets/img/icons/user.png'}
+							alt="notificationti"
+						/>
+					</Link>
 					<div className="myInfo__box-right">
 						<div className="myInfo__box-rt">
-							<Link to="/" className="myInfo__username">
-								<span>식집사</span>
+							<Link to="/myPage" className="myInfo__username">
+								<span>{member.username}</span>
 							</Link>
 							<BiLogOut className="myInfo__logout-btn" title="로그아웃" />
 						</div>
-						{/* <div className="myInfo__box-rb">
-							<Link to="/" className="myInfo__plantState">
-								<img
-									src={process.env.PUBLIC_URL + '/assets/img/icons/water.png'}
-									alt="notificationti"
-								/>
-								<span>1</span>
-							</Link>
-							<Link to="/" className="myInfo__plantState">
-								<img
-									src={
-										process.env.PUBLIC_URL +
-										'/assets/img/icons/nutritionalSupplements.png'
-									}
-									alt="notificationti"
-								/>
-								<span>2</span>
-							</Link>
-							<Link to="/" className="myInfo__plantState">
-								<img
-									src={process.env.PUBLIC_URL + '/assets/img/icons/shovels.png'}
-									alt="notificationti"
-								/>
-								<span>1</span>
-							</Link>
-						</div> */}
 					</div>
 				</div>
-				<Link to="/" className="loginState__plantList-btn">
-					<RiBook2Line className="loginState__plantList-icon" /> 내 반려식물
+				<Link to="/myPlant" className="loginState__plantList-btn">
+					<RiPlantLine className="loginState__plantList-icon" />내 반려식물
 				</Link>
 				<Link to="/plantDiaryList" className="loginState__plantDiaryList-btn">
-					<RiPlantLine className="loginState__plantList-icon" />
+					<RiBook2Line className="loginState__plantList-icon" />
 					식물 일기
 				</Link>
 				<div className="noti__box">

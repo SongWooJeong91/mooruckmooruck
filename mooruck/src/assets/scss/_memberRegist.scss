@@ -1,0 +1,83 @@
+.memberRegist__wrap {
+	width: 100%;
+	margin: 80px 0 0;
+	padding: 100px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.registUser__box {
+		width: 600px;
+		padding: 10px 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: #f2f2f2;
+		box-sizing: border-box;
+		h1 {
+			font-size: 22px;
+			padding: 28px 0 6px 0;
+			color: #404040;
+		}
+		.registUserForm__wrap {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			form {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				// border: 1px solid red;
+				.regist__info-text {
+					text-align: center;
+					color: #f47378;
+					font-size: 14px;
+					display: block;
+					font-weight: 600;
+					// visibility: hidden;
+				}
+				div {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					// border: 1px solid blue;
+					margin: 20px 0 0;
+					label {
+						width: 140px;
+						font-size: 14px;
+						text-align: center;
+					}
+					input {
+						border: none;
+						outline: none;
+						width: 100%;
+						padding: 0.5rem 1rem;
+						border-bottom: 1px solid #fff;
+						box-sizing: border-box;
+
+						&:focus {
+							&::placeholder {
+								opacity: 0;
+							}
+						}
+					}
+				}
+			}
+			button {
+				border: none;
+				outline: none;
+				background: #999;
+				color: #fff;
+				margin: 40px 0 30px 0;
+				padding: 0.5rem 1rem;
+				cursor: pointer;
+				&:hover {
+					background: #555;
+					transition: background 0.3s ease-in;
+				}
+			}
+		}
+	}
+}

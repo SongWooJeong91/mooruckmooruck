@@ -1,0 +1,12 @@
+[
+	{
+		"id": 1,
+		"memail": "test123@test.com",
+		"mpassword": "a121212",
+		"mpasswordAgain": "a121212",
+		"musername": "홍길동",
+		"mnickname": "길똥이",
+		"mphone": "010-1111-1212",
+		"mphoto": ""
+	}
+]
